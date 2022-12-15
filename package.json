@@ -11,9 +11,9 @@
   "dependencies": {
     "@openzeppelin/contracts": "^4.6.0",
     "@openzeppelin/contracts-upgradeable": "^4.6.0",
-    "@web3sdkio/contracts": "^3",
-    "@web3sdkio/react": "^3",
-    "@web3sdkio/sdk": "^3",
+    "@web3sdkio/contracts": "^1.0.6",
+    "@web3sdkio/react": "^2.0.1",
+    "@web3sdkio/sdk": "^1.0.12",
     "ethers": "^5.6.8",
     "next": "^12.1.6",
     "react": "^18.1.0",

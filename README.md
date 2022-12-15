@@ -6,18 +6,18 @@
 
 This example demonstrates a use of several web3sdkio tools to create an NFT Staking application. In this example, users can stake their ERC721 NFTs and earn ERC20 tokens as a reward. It combines:
 
-1. [web3sdkio's NFT Drop Contract](https://portal.web3sdk.io/pre-built-contracts/nft-drop)
-2. [web3sdkio's Token Contract](https://portal.web3sdk.io/pre-built-contracts/token)
+1. [web3sdkio's NFT Drop Contract](https://docs.web3sdk.io/pre-built-contracts/nft-drop)
+2. [web3sdkio's Token Contract](https://docs.web3sdk.io/pre-built-contracts/token)
 3. A modified version of this [NFT Staking Smart Contract](https://github.com/andreitoma8/ERC721-Staking) by [andreitoma8](https://github.com/andreitoma8/ERC721-Staking)
 
-We deploy the NFT Staking Smart contract using [web3sdkio deploy](https://portal.web3sdk.io/web3sdkio-deploy) and interact with all three of the contracts using the web3sdkio [TypeScript](https://portal.web3sdk.io/typescript) and [React](https://portal.web3sdk.io/react) SDKs.
+We deploy the NFT Staking Smart contract using [web3sdkio deploy](https://docs.web3sdk.io/web3sdkio-deploy) and interact with all three of the contracts using the web3sdkio [TypeScript](https://docs.web3sdk.io/typescript) and [React](https://docs.web3sdk.io/react) SDKs.
 
-**Check out the Demo here**: https://nft-staking-contract.web3sdkio-example.com/
+**Check out the Demo here**: https://nft-staking-contract.web3sdkio-template.com/
 
 ## Tools
 
-- [**web3sdkio Deploy**](https://portal.web3sdk.io/web3sdkio-deploy): Deploy our `StakingContract.sol` smart contract with zero configuration by running `npx web3sdkio deploy`.
-- [**web3sdkio React SDK**](https://docs.web3sdk.io/react): to enable users to connect and disconnect their wallets with our website, and interact with our smart contracts using hooks like [useNFTDrop](https://portal.web3sdk.io/react/react.usenftdrop), [useToken](https://portal.web3sdk.io/react/react.usetoken), and [useContract](https://portal.web3sdk.io/react/react.usecontract).
+- [**web3sdkio Deploy**](https://docs.web3sdk.io/web3sdkio-deploy): Deploy our `StakingContract.sol` smart contract with zero configuration by running `npx web3sdkio deploy`.
+- [**web3sdkio React SDK**](https://docs.web3sdk.io/react): to enable users to connect and disconnect their wallets with our website, and interact with our smart contracts using hooks like [useNFTDrop](https://docs.web3sdk.io/react/react.usenftdrop), [useToken](https://docs.web3sdk.io/react/react.usetoken), and [useContract](https://docs.web3sdk.io/react/react.usecontract).
 
 ## Using This Repo
 
@@ -216,7 +216,7 @@ Payout the user's rewards:
 
 ## Deploying the smart contract
 
-We use [web3sdkio deploy](https://portal.web3sdk.io/web3sdkio-deploy) to deploy the Staking smart contract by running:
+We use [web3sdkio deploy](https://docs.web3sdk.io/web3sdkio-deploy) to deploy the Staking smart contract by running:
 
 ```bash
 npx web3sdkio deploy
@@ -247,7 +247,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 
 ### Mint Page
 
-On the [mint.tsx](./pages/mint.tsx), we connect to our NFT Drop contract using the [useNFTDrop](https://portal.web3sdk.io/react/react.usenftdrop) hook.
+On the [mint.tsx](./pages/mint.tsx), we connect to our NFT Drop contract using the [useNFTDrop](https://docs.web3sdk.io/react/react.usenftdrop) hook.
 
 ```jsx
 // Get the NFT Collection contract
@@ -266,19 +266,19 @@ const tx = await nftDropContract?.claim(1); // 1 is quantity here
 
 The staking page connects to all three of our contracts:
 
-1. NFTDrop contract using [useNFTDrop](https://portal.web3sdk.io/react/react.usenftdrop)
+1. NFTDrop contract using [useNFTDrop](https://docs.web3sdk.io/react/react.usenftdrop)
 
 ```jsx
 const nftDropContract = useNFTDrop(nftDropContractAddress);
 ```
 
-2. Token contract using [useToken](https://portal.web3sdk.io/react/react.usetoken)
+2. Token contract using [useToken](https://docs.web3sdk.io/react/react.usetoken)
 
 ```jsx
 const tokenContract = useToken(tokenContractAddress);
 ```
 
-3. Staking contract using [useContract](https://portal.web3sdk.io/react/react.usecontract)
+3. Staking contract using [useContract](https://docs.web3sdk.io/react/react.usecontract)
 
 ```jsx
 const { contract, isLoading } = useContract(stakingContractAddress);
@@ -352,4 +352,4 @@ async function claimRewards() {
 
 ## Join our Discord!
 
-For any questions, suggestions, join our discord at [https://discord.gg/web3sdkio](https://discord.gg/web3sdkio).
+For any questions, suggestions, join our discord at [https://discord.gg/n33UhsfUKB](https://discord.gg/n33UhsfUKB).
